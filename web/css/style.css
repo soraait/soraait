@@ -84,7 +84,11 @@ body {
     background-color: #885d00;
 }
 
-
+.div1{
+    /* background-color: black; */
+    height: 500px;
+    width: 100%;
+}
 
  .header {
     /* background: #666 url(../img/bg.jpg) ; */

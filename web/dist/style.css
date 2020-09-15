@@ -444,6 +444,7 @@ html, body {
   left: 0;
   height: 100%;
   width: 100%;
+  
 }
 #info.show #card .content {
   animation: flipUp 0.2s linear 0.9s forwards;
@@ -4033,15 +4034,17 @@ html, body {
 
 .yellow, .prev-.yellow {
   font-family: 'Monserrat', sans-serif;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #FCEE6D;
+  position: absolute;
+  margin: 0;
+  top: 100px;
+  
+  left: 990px;
+  width: 100px;
+  height: 100px;
+  /* background: #FCEE6D; */
 }
 .yellow.yellow, .prev-.yellow.yellow {
-  background: #FCEE6D;
+  /* background: #FCEE6D; */
   transition: all 0.2s ease-in-out;
 }
 .yellow #calendar, .prev-.yellow #calendar {

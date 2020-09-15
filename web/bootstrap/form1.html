@@ -88,7 +88,7 @@
   <!-- <img src="img/h1.png" alt="">  -->
 </header>
 
-<body style="background-color: rgb(233, 116, 0);">
+<body style="background-color: lightskyblue">
 
 
   <!-- Optional JavaScript -->
@@ -139,71 +139,100 @@
   </div>
 
   <header class="header" >
-    <h3 style="margin-left: 50px ;margin-top: 50px;">รายละเอียดครุภัณฑ์</h3><br>
+    <h3 style="margin-left: 150px ;margin-top: 50px;">รายละเอียดครุภัณฑ์</h3><br>
     <div class="div2">
       <form action="/bootstrap/form1.html">
-        <label style="margin-left: 50px ;margin-top: 5px;" for="fname">หมายเลขครุภัณฑ์</label><br>
-        <input type="text" id="num durable articles" name="numd" placeholder="xxx-xxx-xxx-xxx" required><br>
+          <div style="width: 100%; " >
 
-        <label style="margin-left: 50px ;margin-top: 5px;" for="lname">ชื่อครุภัณฑ์</label><br>
-        <input type="text" id="name durable articles" name="named" placeholder="Product name.." required><br>
+            <div style=" 
+            position: absolute;
+            margin-left: 80px;
+            
+            width: 400px; ">
 
-        <label style="margin-left: 50px ; margin-top: 5px;" for="lname">จำนวน (ชิ้น)</label><br>
-        <input type="number" id="number of durable articles" name="numberd" placeholder="0" required><br>
+              <label style="margin-left: 50px ;margin-top: 5px;" for="fname">หมายเลขครุภัณฑ์</label><br>
+            <input type="text" id="num durable articles" name="numd" placeholder="xxx-xxx-xxx-xxx" required><br>
+    
+            <label style="margin-left: 50px ;margin-top: 5px;" for="lname">ชื่อครุภัณฑ์</label><br>
+            <input type="text" id="name durable articles" name="named" placeholder="Product name.." required><br>
+    
+            <label style="margin-left: 50px ; margin-top: 5px;" for="lname">จำนวน (ชิ้น)</label><br>
+            <input type="number" id="number of durable articles" name="numberd" placeholder="0" required><br>
+    
+            <label style="margin-left: 50px ;margin-top: 5px;" for="lname">ต้นทุนต่อหน่วย</label><br>
+            <input type="text" id="price durable articles" name="priced" placeholder="ราคา" required><br>
+    
+            <label style="margin-left: 50px ;margin-top: 5px;" for="lname">ยี่ห้อ</label><br>
+            <input type="text" id="band" name="bandd" placeholder="ยี่ห้อ" required><br>
+    
+            <label style="margin-left: 50px ;margin-top: 5px;" for="lname">โมเดล</label><br>
+            <input type="text" id="model" name="modeld" placeholder="model" required><br>
+    
+            
+            </div>
 
-        <label style="margin-left: 50px ;margin-top: 5px;" for="lname">ต้นทุนต่อหน่วย</label><br>
-        <input type="text" id="price durable articles" name="priced" placeholder="ราคา" required><br>
+            
+            <div style=" 
+            /* position: absolute; */
+            
+            margin-left: 800px;
+            
+            width: 400px; 
+            float: left;">
+            <label style="margin-left: 50px ;margin-top: 5px;" for="lname">หมายเลขเครื่อง</label><br>
+            <input type="text" id="seral number" name="sn" placeholder="s/n" required><br>
 
-        <label style="margin-left: 50px ;margin-top: 5px;" for="lname">ยี่ห้อ</label><br>
-        <input type="text" id="band" name="bandd" placeholder="ยี่ห้อ" required><br>
+            <label style="margin-left: 50px ;margin-top: 5px;" for="country">สถานะ</label><br>
+            <select id="status" name="statusd">
+              <option value="australia">ใช้งาน</option>
+              <option value="canada">ไม่ใช้งาน</option>
+              <option value="usa">อยู่ระหว่างนำซ่อม</option>
+            </select><br>
+    
+            <label style="margin-left: 50px ;margin-top: 5px;" for="country">ผลการตรวจสอบพัสดุ</label><br>
+            <select id="test" name="testd">
+              <option value="usa">ตรวจพบ</option>
+              <option value="australia">ชำรุด</option>
+              <option value="canada">เสื่อมสภาพ</option>
+              <option value="usa">หมดความจำเป็น</option>
+              <option value="usa">ตรวจไม่พบ</option>
+            </select><br>
+    
+            <label style="margin-left: 50px ;margin-top: 5px;" for="lname">ผู้รับผิดชอบ</label><br>
+            <input type="text" id="dealer" name="dealerd" placeholder="..." required><br>
+    
+            <label style="margin-left: 50px ;margin-top: 5px;" for="country">สถานที่ใช้งาน</label><br>
+            <select id="locat" name="locatd">
+              <option value="usa">none</option>
+              <option value="usa">ict1323</option>
+              <option value="australia">ict1340</option>
+              <option value="canada">ict1311</option>
+              <option value="usa">ict1203</option>
+              <option value="usa">ict1235</option>
+            </select><br>
+    
+            <label style="margin-left: 50px ;margin-top: 5px;" for="country">สถานที่ใช้งานเดิม</label><br>
+            <select id="olocat" name="olocatd">
+              <option value="usa">none</option>
+              <option value="usa">ict1323</option>
+              <option value="australia">ict1340</option>
+              <option value="canada">ict1311</option>
+              <option value="usa">ict1203</option>
+              <option value="usa">ict1235</option>
+            </select><br>
+    
+            <input type="submit" value="Submit">
+            <input type="reset" value="reset">
 
-        <label style="margin-left: 50px ;margin-top: 5px;" for="lname">โมเดล</label><br>
-        <input type="text" id="model" name="modeld" placeholder="model" required><br>
+          </div>
+            
 
-        <label style="margin-left: 50px ;margin-top: 5px;" for="lname">หมายเลขเครื่อง</label><br>
-        <input type="text" id="seral number" name="sn" placeholder="s/n" required><br>
+          </div>
+<!-- -------------------------------------------------------------------------------------------------------------------------- -->
 
-        <label style="margin-left: 50px ;margin-top: 5px;" for="country">สถานะ</label><br>
-        <select id="status" name="statusd">
-          <option value="australia">ใช้งาน</option>
-          <option value="canada">ไม่ใช้งาน</option>
-          <option value="usa">อยู่ระหว่างนำซ่อม</option>
-        </select><br>
-
-        <label style="margin-left: 50px ;margin-top: 5px;" for="country">ผลการตรวจสอบพัสดุ</label><br>
-        <select id="test" name="testd">
-          <option value="usa">ตรวจพบ</option>
-          <option value="australia">ชำรุด</option>
-          <option value="canada">เสื่อมสภาพ</option>
-          <option value="usa">หมดความจำเป็น</option>
-          <option value="usa">ตรวจไม่พบ</option>
-        </select><br>
-
-        <label style="margin-left: 50px ;margin-top: 5px;" for="lname">ผู้รับผิดชอบ</label><br>
-        <input type="text" id="dealer" name="dealerd" placeholder="..." required><br>
-
-        <label style="margin-left: 50px ;margin-top: 5px;" for="country">สถานที่ใช้งาน</label><br>
-        <select id="locat" name="locatd">
-          <option value="usa">none</option>
-          <option value="usa">ict1323</option>
-          <option value="australia">ict1340</option>
-          <option value="canada">ict1311</option>
-          <option value="usa">ict1203</option>
-          <option value="usa">ict1235</option>
-        </select><br>
-
-        <label style="margin-left: 50px ;margin-top: 5px;" for="country">สถานที่ใช้งานเดิม</label><br>
-        <select id="olocat" name="olocatd">
-          <option value="usa">none</option>
-          <option value="usa">ict1323</option>
-          <option value="australia">ict1340</option>
-          <option value="canada">ict1311</option>
-          <option value="usa">ict1203</option>
-          <option value="usa">ict1235</option>
-        </select><br>
-
-        <input type="submit" value="Submit">
-        <input type="reset" value="reset">
+          
+  
+       
 
       </form>
     </div>
