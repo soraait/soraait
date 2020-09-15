@@ -1,0 +1,153 @@
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 16px;
+    font: inherit;
+    vertical-align: baseline
+  }
+  
+
+  
+.hidden { display: none; }
+  
+  /**
+   * Keyframes for autoplay
+   */
+  @-webkit-keyframes 
+  autoplay {   /* position of the first slide */
+    0% {
+   left: 0;
+  }
+    /* position of the second slide */
+    25% {
+   left: -600px;
+  }
+    /* position of the third slide */
+    50% {
+   left: -1200px;
+  }
+    /* position of the fourth slide */
+    100% {
+   left: -1800px;
+  }
+  }
+  @keyframes 
+  autoplay {   /* position of the first slide */
+    0% {
+   left: 0;
+  }
+    /* position of the second slide */
+    25% {
+   left: -600px;
+  }
+    /* position of the third slide */
+    50% {
+   left: -1200px;
+  }
+    /* position of the fourth slide */
+    100% {
+   left: -1800px;
+  }
+  }
+  
+  /**
+   * Slider
+   */
+  
+  .slider {
+    position: relative;
+    /* top margin is for purposes of demo */
+
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: 40px;
+    overflow: hidden;
+    width: 600px;
+    height: 450px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  }
+  
+  .slider__list {
+    position: absolute;
+    left: 0;
+    width: 162.5rem;
+  }
+  
+  .slider__slide {
+    float: left; 
+}
+  
+  /**
+   * Slider control
+   */
+  
+  .slider__control {
+      
+    margin-top: 10px;
+    padding-left:300px ;
+    width: 10px;
+    font-family: sans-serif;
+
+  }
+  
+  .slider__control label {
+    position: relative;
+    display: block;
+    margin-top: 2px;
+    margin-bottom: 1px;
+    margin-left:0 ;
+    width: 72px;
+    height: 32px;
+    font-size: 0px;
+    font-weight: small;
+    line-height: 1.5;
+    color: transparent;
+    background: #ddd;
+    border-radius: 2rem;
+    cursor: pointer;
+    -webkit-transition: left 0.15s ease-out;
+    transition: left 0.15s ease-out;
+  }
+  
+  .slider__control label:before {
+    content: "";
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    color: #333;
+   font-size: .95rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .slider__control label:after {
+    content: "";
+    position: absolute;
+   top: .25rem;
+   left: .25rem;
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 2rem;
+    background: #fff;
+    -webkit-transition: left 0.15s ease-out;
+    transition: left 0.15s ease-out;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .slider__switch:checked + .slider > .slider__list {
+    -webkit-animation-name: autoplay;
+    animation-name: autoplay;
+    /* This will change the time it takes to move to next slide */
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+  
+  .slider__switch:checked + .slider + .slider__control > label { background: #455a64; }
+  
+  .slider__switch:checked + .slider + .slider__control > label:after { left: 2.75rem; }

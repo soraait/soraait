@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="bootstrap-grid.css">
+  <link rel="stylesheet" href="bootstrap-grid.min.css">
+  <link rel="stylesheet" href="bootstrap-reboot.css">
+  <link rel="stylesheet" href="bootstrap-reboot.min.css">
+
+
+  <!-- <link rel="stylesheet" href="../../css/style.css"> -->
+  <style>
+    input[type=text],
+    select {
+      width: 200px;
+      padding: 5px 20px;
+      margin: 0;
+      margin-left: 50px;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=number],
+    select {
+      width: 200px;
+      padding: 5px 20px;
+      margin: 0;
+      margin-left: 50px;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=submit] {
+      width: 75px;
+      background-color: #4CAF50;
+      color: white;
+      padding: 5px 10px;
+      margin: 8px 3;
+      margin-left: 50px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=reset] {
+      width: 75px;
+      background-color: #4CAF50;
+      color: white;
+      padding: 5px 10px;
+      margin: 8px 3;
+      margin-left: 20px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    div2 {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      margin-left: 10px;
+    }
+  </style>
+
+
+  <title>เพิ่มครุภัณฑ์</title>
+
+</head>
+
+<header id="h1">
+  <!-- <img src="img/h1.png" alt="">  -->
+</header>
+
+<body style="background-color: rgb(233, 116, 0);">
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+  <div class="menubar">
+
+    <div class="logo">
+      <h1>ระบบการจัดการตรวจสอบครุภัณฑ์และวัสดุคงทนถาวร</h1>
+    </div>
+
+    <div class="dropdown" style="float:left;">
+      <button class="dropbtn"><a href="/home.html" style="border: none; color: white; ">หน้าหลัก</a></button>
+    </div>
+
+
+    <div class="dropdown" style="float:right; ">
+      <form>
+        <button class="dropbtn">
+          <a href="../login.html">ออกจากระบบ</a>
+        </button>
+      </form>
+    </div>
+
+    <div class="dropdown" style="float:right;">
+      <button class="dropbtn">รายงาน</button>
+    </div>
+
+    <div class="dropdown" style="float:right;">
+      <button class="dropbtn">จัดการครุภัณฑ์</button>
+      <div class="dropdown-content" style="left:0;">
+        <a href="#">ค้นหาครุภัณฑ์</a>
+        <a href="/bootstrap/form1.html">เพิ่มครุภัณฑ์</a>
+        <a href="#">ลบครุภัณฑ์</a>
+        <a href="#">แก้ไขครุภัณฑ์</a>
+      </div>
+    </div>
+
+  </div>
+
+  <header class="header" >
+    <h3 style="margin-left: 50px ;margin-top: 50px;">รายละเอียดครุภัณฑ์</h3><br>
+    <div class="div2">
+      <form action="/bootstrap/form1.html">
+        <label style="margin-left: 50px ;margin-top: 5px;" for="fname">หมายเลขครุภัณฑ์</label><br>
+        <input type="text" id="num durable articles" name="numd" placeholder="xxx-xxx-xxx-xxx" required><br>
+
+        <label style="margin-left: 50px ;margin-top: 5px;" for="lname">ชื่อครุภัณฑ์</label><br>
+        <input type="text" id="name durable articles" name="named" placeholder="Product name.." required><br>
+
+        <label style="margin-left: 50px ; margin-top: 5px;" for="lname">จำนวน (ชิ้น)</label><br>
+        <input type="number" id="number of durable articles" name="numberd" placeholder="0" required><br>
+
+        <label style="margin-left: 50px ;margin-top: 5px;" for="lname">ต้นทุนต่อหน่วย</label><br>
+        <input type="text" id="price durable articles" name="priced" placeholder="ราคา" required><br>
+
+        <label style="margin-left: 50px ;margin-top: 5px;" for="lname">ยี่ห้อ</label><br>
+        <input type="text" id="band" name="bandd" placeholder="ยี่ห้อ" required><br>
+
+        <label style="margin-left: 50px ;margin-top: 5px;" for="lname">โมเดล</label><br>
+        <input type="text" id="model" name="modeld" placeholder="model" required><br>
+
+        <label style="margin-left: 50px ;margin-top: 5px;" for="lname">หมายเลขเครื่อง</label><br>
+        <input type="text" id="seral number" name="sn" placeholder="s/n" required><br>
+
+        <label style="margin-left: 50px ;margin-top: 5px;" for="country">สถานะ</label><br>
+        <select id="status" name="statusd">
+          <option value="australia">ใช้งาน</option>
+          <option value="canada">ไม่ใช้งาน</option>
+          <option value="usa">อยู่ระหว่างนำซ่อม</option>
+        </select><br>
+
+        <label style="margin-left: 50px ;margin-top: 5px;" for="country">ผลการตรวจสอบพัสดุ</label><br>
+        <select id="test" name="testd">
+          <option value="usa">ตรวจพบ</option>
+          <option value="australia">ชำรุด</option>
+          <option value="canada">เสื่อมสภาพ</option>
+          <option value="usa">หมดความจำเป็น</option>
+          <option value="usa">ตรวจไม่พบ</option>
+        </select><br>
+
+        <label style="margin-left: 50px ;margin-top: 5px;" for="lname">ผู้รับผิดชอบ</label><br>
+        <input type="text" id="dealer" name="dealerd" placeholder="..." required><br>
+
+        <label style="margin-left: 50px ;margin-top: 5px;" for="country">สถานที่ใช้งาน</label><br>
+        <select id="locat" name="locatd">
+          <option value="usa">none</option>
+          <option value="usa">ict1323</option>
+          <option value="australia">ict1340</option>
+          <option value="canada">ict1311</option>
+          <option value="usa">ict1203</option>
+          <option value="usa">ict1235</option>
+        </select><br>
+
+        <label style="margin-left: 50px ;margin-top: 5px;" for="country">สถานที่ใช้งานเดิม</label><br>
+        <select id="olocat" name="olocatd">
+          <option value="usa">none</option>
+          <option value="usa">ict1323</option>
+          <option value="australia">ict1340</option>
+          <option value="canada">ict1311</option>
+          <option value="usa">ict1203</option>
+          <option value="usa">ict1235</option>
+        </select><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="reset">
+
+      </form>
+    </div>
+
+
+
+
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+<footer>
+  <!-- <img src="img/f1.png" alt="">  -->
+</footer>
+
+</html>
