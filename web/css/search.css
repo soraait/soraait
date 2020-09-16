@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#h1{
+    background: #666 url(../img/h1.png) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100px;
+} 
+
+footer {
+    background: #666 url(../img/f1.png) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100px;
+}
+footer p {
+    margin: 0 0 0 0 ;
+} 
+
+
+.menubar {
+    width: 100%;
+    height: 55px;
+    background: rgb(255, 177, 8);
+    box-shadow: 0 0 10px #666; 
+    position: relative;
+}
+
+.menubar .logo {
+    float: left;
+    margin : 0 ;
+    padding: 0;
+}
+
+.menubar h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
+    padding: 10px;
+}
+
+.dropbtn {
+    background-color: rgb(255, 177, 8);
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 0px 4px ;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #dfac07;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #885d00;
+}
+
+
+.icon{
+    height: 60px px;
+    width: 60px;
+    background-color: white;
+}
+
+td{
+    text-align: center;
+}
+
+#td1 {
+    border: 1px solid black;
+  }
+
+.searchbar{
+    width: 600px;
+}  
+
+.pagination {
+    display: inline-block;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+  }
+  
+  .pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+  }
+  
+  .pagination a:hover:not(.active) {background-color: #ddd;}
