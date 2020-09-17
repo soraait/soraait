@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เพิ่มQRcode</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/bootstrap/bootstrap-grid.css">
+  <link rel="stylesheet" href="/bootstrap/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="/bootstrap/bootstrap-reboot.css">
+  <link rel="stylesheet" href="/bootstrap/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="/css/search.css">
+
+  <style>
+    input[type=text],
+    select {
+      width: 200px;
+      padding: 5px 20px;
+      margin: 0;
+      margin-left: 50px;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=number],
+    select {
+      width: 200px;
+      padding: 5px 20px;
+      margin: 0;
+      margin-left: 50px;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=submit] {
+      width: 75px;
+      background-color: #4CAF50;
+      color: white;
+      padding: 5px 10px;
+      margin: 8px 3;
+      margin-left: 50px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=reset] {
+      width: 75px;
+      background-color: #4CAF50;
+      color: white;
+      padding: 5px 10px;
+      margin: 8px 3;
+      margin-left: 20px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    div2 {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      margin-left: 10px;
+    }
+  </style>
+
+</head>
+<body>
+    
+    
+<header id="h1">
+    <!-- <img src="img/h1.png" alt="">  -->
+</header>
+
+<body>
+
+    <div class="menubar">
+
+        <div class="logo">
+            <h1>ระบบการจัดการตรวจสอบครุภัณฑ์และวัสดุคงทนถาวร</h1>
+        </div>
+
+        <div class="dropdown" style="float:left;">
+            <button class="dropbtn"><a href="/home.html" style="border: none; color: white; ">หน้าหลัก</a></button>
+        </div>
+
+
+        <div class="dropdown" style="float:right; ">
+            <form>
+              <button class="dropbtn">
+                <a href="/login.html">ออกจากระบบ</a>
+              </button>
+            </form>
+          </div>  
+
+        <div class="dropdown" style="float:right;">
+            <button class="dropbtn"><a href="http://intra.up.ac.th/inv/eInventory/Inventory_Report.aspx?sType=place&place=ICT" style="color: white;">รายงาน</a></button>
+        </div>
+
+        <div class="dropdown" style="float:right;">
+            <button class="dropbtn">จัดการครุภัณฑ์</button>
+            <div class="dropdown-content" style="left:0;">
+                <a href="/search.html">ค้นหาครุภัณฑ์</a>
+                <a href="/bootstrap/form1.html">เพิ่มครุภัณฑ์</a>
+                <a href="/addqr.html">สร้างคิวอาร์โค้ด</a>
+                <a href="#">แก้ไขครุภัณฑ์</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div style="height: 450px;">
+        <div style="margin-left: 30px;">
+            <h3>การสร้างคิวอาร์โค้ด</h3>
+            <div>
+                <input type="submit" value="สร้าง" >
+            </div> 
+            <h5>รายการครุภัณฑ์ที่ยังไม่ได้สร้างคิวอาร์โค้ด</h5>
+            
+        </div>
+        <div>
+            <table>
+                <!-- แทปค้นหา -->
+                <tr style="height: 40px; ">
+                    <td id="td1" style="width: 40px;  ">
+                        <a >
+                              <img src="/img/search.png" alt="ไอคอน" style="width: 80%;" class="icon" >  
+                        </a>
+                    </td>
+                    <td id="td1" style="width: 400px; height: 40px; ">
+                        <input type="search" name="s1" id="s1" placeholder="ค้นหาครุภัณฑ์" class="searchbar"  style="height: 30px;">
+                    </td>
+                    <td>
+                    <select id="search_by" name="search_by" style="height: 30px;">
+                        <option value="australia">เลขครุภัณฑ์</option>
+                        <option value="canada">ชื่อครุภัณฑ์</option>
+                        <option value="usa">หมายเลขห้อง</option>
+                    </select>
+                    </td>
+                    <td>
+                        <input type="submit" value="ค้นหา">
+                    </td>
+                </tr>
+            
+    
+            </table>
+
+        </table>
+        <table style="width: 100%; ">
+            
+            <!-- หัวตาราง -->
+            <tr style="background-color: rgb(71, 81, 179); height: 60px; ">
+                <td style="width: 80px;">
+                    <a>
+                        <img src="/img/check-box.png" alt="checkbox" style="width: 40%;" class="icon" >
+                    </a>
+                </td>
+                <th>
+                    ลำดับ
+                </th>
+                <th>
+                    เลขครุภัณฑ์
+                </th>
+                <th>
+                    ชื่อครุภัณฑ์
+                </th>
+                <th>
+                    ห้อง
+                </th>
+            </tr>
+            <!-- รายการครุภัณฑ์ -->
+            <tr style="background-color: coral; height: 40px;">
+                <td style="width: 20px;">
+                    <input type="checkbox" name="c" id="c">
+                </td>
+                <td>
+                    
+                </td>
+                <td style="padding-left: 150px;">
+                    No records found
+                </td>
+                <td>
+                   
+                </td>
+                <td>
+                    
+                </td>
+
+            </tr>
+            
+        </table>
+        <div>
+            <div style="margin-top: 10px;margin-left: 500px;">
+            <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <!-- <a href="#" class="active">2</a> -->
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
+              </div>
+        </div>
+        </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+<footer>
+
+</footer>
+</html>
